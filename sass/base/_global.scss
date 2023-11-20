@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+body {
+    font-family: $regular-font;
+    font-size: 1.8rem;
+    background-color: #333;
+}
+
+.wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+}

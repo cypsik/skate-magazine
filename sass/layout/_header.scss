@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.header {
+	position: relative;
+	min-height: 75vh;
+	background-image: url('../../img/header_bg_small.jpg');
+	@include hero-img;
+
+	&::after {
+		content: '';
+		@include hero-bg;
+		background-color: $white-opacity-80;
+	}
+}

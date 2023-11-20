@@ -1,0 +1,7 @@
+@use '../abstracts/variables' as *;
+
+.footer {
+	position: relative;
+	min-height: 25vh;
+    background-color: $theme-color;
+}

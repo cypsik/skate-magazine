@@ -1,0 +1,141 @@
+@font-face {
+  font-family: "robotoblack_italic";
+  src: url("../../fonts/roboto-blackitalic-webfont.woff2") format("woff2");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "robotobold";
+  src: url("../../fonts/roboto-bold-webfont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "robotobold_italic";
+  src: url("../../fonts/roboto-bolditalic-webfont.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "robotoitalic";
+  src: url("../../fonts/roboto-italic-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../../fonts/roboto-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "kaushan_script";
+  src: url("../../fonts/kaushanscript-regular-webfont.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "roboto", sans-serif;
+  font-size: 1.8rem;
+  background-color: #333;
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.header {
+  position: relative;
+  min-height: 75vh;
+  background-image: url("../../img/header_bg_small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.products {
+  min-height: 100vh;
+  background-color: #fedc82;
+}
+
+.features {
+  position: relative;
+  min-height: 75vh;
+  background-image: url("../../img/features_bg_small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+.features::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgba(0, 35, 91, 0.8);
+}
+
+.delivery {
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+.contact {
+  position: relative;
+  min-height: 75vh;
+  background-image: url("../../img/contact_bg_small.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 0;
+}
+.contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.footer {
+  position: relative;
+  min-height: 25vh;
+  background-color: #00235b;
+}/*# sourceMappingURL=main.css.map */
