@@ -52,6 +52,7 @@
 }
 
 body {
+  position: relative;
   font-family: "roboto", sans-serif;
   font-size: 1.8rem;
   background-color: #333;
@@ -62,6 +63,46 @@ body {
   margin: 0 auto;
   max-width: 1200px;
   width: 100%;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+.nav__home {
+  color: #00235b;
+  font-family: "robotoblack_italic", sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.nav__home span {
+  color: #005ccc;
+}
+.nav__links a {
+  padding: 0.5rem 1rem;
+  color: #00235b;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s;
+  z-index: 5;
+}
+.nav__links a:hover {
+  color: #ffffff;
+}
+.nav__links a::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background-color: #00235b;
+  transition: height 0.2s;
+  z-index: -1;
+}
+.nav__links a:hover::before {
+  height: 100%;
 }
 
 .header {

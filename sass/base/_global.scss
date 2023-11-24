@@ -2,6 +2,7 @@
 @use '../abstracts/mixins' as *;
 
 body {
+    position: relative;
     font-family: $regular-font;
     font-size: 1.8rem;
     background-color: #333;

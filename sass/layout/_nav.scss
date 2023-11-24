@@ -1,0 +1,49 @@
+@use '../abstracts/variables' as *;
+
+.nav {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    
+    &__home {
+        color: $theme-color;
+        font-family: $black-italic-font;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        span {
+            color: $second-color;
+        }
+    }
+
+    &__links {
+        a {
+            padding: .5rem 1rem;
+            color: $theme-color;
+            position: relative;
+            text-decoration: none;
+            transition: color .3s;
+            z-index: 5;
+        }
+
+        a:hover {
+            color: $white;
+        }
+
+        a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 0%;
+            width: 100%;
+            background-color: $theme-color;
+            transition: height .2s;
+            z-index: -1;
+        }
+        
+        a:hover::before {
+            height: 100%;
+        }
+    }
+}
