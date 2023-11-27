@@ -5,6 +5,15 @@
     width: 100%;
     z-index: 5;
     
+    &__icon {
+        display: none;
+        padding: .5rem 1rem;
+        background: transparent;
+        border: transparent;
+        font-size: 3rem;
+        cursor: pointer;
+    }
+    
     &__home {
         color: $theme-color;
         font-family: $black-italic-font;
@@ -18,9 +27,11 @@
 
     &__links {
         a {
+            position: relative;
             padding: .5rem 1rem;
             color: $theme-color;
-            position: relative;
+            font-family: $bold-italic-font;
+            text-transform: uppercase;
             text-decoration: none;
             transition: color .3s;
             z-index: 5;

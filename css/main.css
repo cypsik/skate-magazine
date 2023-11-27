@@ -40,7 +40,9 @@
   font-style: normal;
   font-display: swap;
 }
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -70,6 +72,14 @@ body {
   width: 100%;
   z-index: 5;
 }
+.nav__icon {
+  display: none;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: transparent;
+  font-size: 3rem;
+  cursor: pointer;
+}
 .nav__home {
   color: #00235b;
   font-family: "robotoblack_italic", sans-serif;
@@ -80,9 +90,11 @@ body {
   color: #005ccc;
 }
 .nav__links a {
+  position: relative;
   padding: 0.5rem 1rem;
   color: #00235b;
-  position: relative;
+  font-family: "robotobold_italic", sans-serif;
+  text-transform: uppercase;
   text-decoration: none;
   transition: color 0.3s;
   z-index: 5;
