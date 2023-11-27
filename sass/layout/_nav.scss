@@ -4,16 +4,16 @@
     position: fixed;
     width: 100%;
     z-index: 5;
-    
-    &__icon {
-        display: none;
-        padding: .5rem 1rem;
-        background: transparent;
-        border: transparent;
-        font-size: 3rem;
-        cursor: pointer;
+
+    .nav-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 1em;
+        background: red;
+        border: 1px solid transparent;
     }
-    
+     
     &__home {
         color: $theme-color;
         font-family: $black-italic-font;
@@ -27,6 +27,7 @@
 
     &__links {
         a {
+            display: none;
             position: relative;
             padding: .5rem 1rem;
             color: $theme-color;

@@ -72,13 +72,13 @@ body {
   width: 100%;
   z-index: 5;
 }
-.nav__icon {
-  display: none;
-  padding: 0.5rem 1rem;
-  background: transparent;
-  border: transparent;
-  font-size: 3rem;
-  cursor: pointer;
+.nav .nav-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 1em;
+  background: red;
+  border: 1px solid transparent;
 }
 .nav__home {
   color: #00235b;
@@ -90,6 +90,7 @@ body {
   color: #005ccc;
 }
 .nav__links a {
+  display: none;
   position: relative;
   padding: 0.5rem 1rem;
   color: #00235b;
@@ -191,4 +192,13 @@ body {
   position: relative;
   min-height: 25vh;
   background-color: #00235b;
+}
+
+@media (min-width: 576px) {
+  .nav .nav-btn {
+    display: none;
+  }
+  .nav__links a {
+    display: inline;
+  }
 }/*# sourceMappingURL=main.css.map */
