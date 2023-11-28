@@ -1,61 +1,98 @@
 @use '../abstracts/variables' as *;
 
 .nav {
-    position: fixed;
-    width: 100%;
-    z-index: 5;
+	position: fixed;
+	width: 100%;
+	// background-color: rgba(0,0,0,.4);
+	z-index: 5;
 
-    .nav-btn {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        padding: 1em;
-        background: red;
-        border: 1px solid transparent;
-    }
-     
-    &__home {
-        color: $theme-color;
-        font-family: $black-italic-font;
-        text-decoration: none;
-        text-transform: uppercase;
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 2rem;
+	}
 
-        span {
-            color: $second-color;
-        }
-    }
+	&__home {	
+		color: $theme-color;
+		font-family: $black-italic-font;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: color .2s;
 
-    &__links {
-        a {
-            display: none;
-            position: relative;
-            padding: .5rem 1rem;
-            color: $theme-color;
-            font-family: $bold-italic-font;
-            text-transform: uppercase;
-            text-decoration: none;
-            transition: color .3s;
-            z-index: 5;
-        }
+		span {
+			color: $second-color;
+		}
+	}
 
-        a:hover {
-            color: $white;
-        }
+	&__links {
+		a {
+			display: none;
+			position: relative;
+			padding: 0.5rem 1rem;
+			color: $theme-color;
+			font-family: $bold-italic-font;
+			text-transform: uppercase;
+			text-decoration: none;
+			transition: color 0.3s;
+			z-index: 5;
+		}
 
-        a::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 0%;
-            width: 100%;
-            background-color: $theme-color;
-            transition: height .2s;
-            z-index: -1;
-        }
-        
-        a:hover::before {
-            height: 100%;
-        }
-    }
+		a:hover {
+			color: $white;
+		}
+
+		a::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			height: 0%;
+			width: 100%;
+			background-color: $theme-color;
+			transition: height 0.2s;
+			z-index: -1;
+		}
+
+		a:hover::before {
+			height: 100%;
+		}
+	}
+
+	.nav-btn {
+		background: none;
+		border: 1px solid transparent;
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+			border: 1px solid rgba(255, 255, 255, 0.5);
+			border-radius: 8px;
+		}
+
+		&__box {
+			position: relative;
+			height: 30px;
+			width: 30px;
+			background-color: royalblue;
+		}
+
+		&__bars {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			height: 5px;
+			border-radius: 100px;
+			background-color: red;
+
+			// robisz tutaj kolejną kreske na burger icon
+
+			&::after {
+				content: '';
+			}
+		}
+	}
+
 }

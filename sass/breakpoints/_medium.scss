@@ -1,2 +1,13 @@
 @media (min-width: 768px) {
+	.nav {
+		.nav-btn {
+			display: none;
+		}
+
+		&__links {
+			a {
+				display: inline;
+			}
+		}
+	}
 }
