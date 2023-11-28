@@ -14,11 +14,11 @@
 	}
 
 	&__home {	
+		padding: 1rem;
 		color: $theme-color;
 		font-family: $black-italic-font;
 		text-decoration: none;
 		text-transform: uppercase;
-		transition: color .2s;
 
 		span {
 			color: $second-color;
@@ -60,39 +60,9 @@
 	}
 
 	.nav-btn {
-		background: none;
-		border: 1px solid transparent;
+		margin-right: 1rem;
+		height: 30px;
+		width: 30px;
 		cursor: pointer;
-
-		&:focus {
-			outline: none;
-			border: 1px solid rgba(255, 255, 255, 0.5);
-			border-radius: 8px;
-		}
-
-		&__box {
-			position: relative;
-			height: 30px;
-			width: 30px;
-			background-color: royalblue;
-		}
-
-		&__bars {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			width: 100%;
-			height: 5px;
-			border-radius: 100px;
-			background-color: red;
-
-			// robisz tutaj kolejną kreske na burger icon
-
-			&::after {
-				content: '';
-			}
-		}
 	}
-
 }
