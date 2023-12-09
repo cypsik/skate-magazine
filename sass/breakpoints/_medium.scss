@@ -4,8 +4,8 @@
 			display: none;
 		}
 
-		&__links {
-			a {
+		&-links {
+			&__link {
 				display: inline;
 			}
 		}

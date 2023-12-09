@@ -4,74 +4,67 @@
 .nav {
 	position: fixed;
 	width: 100%;
-	z-index: 5;
+	z-index: 1;
 
-	&__container {
+	&-container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		padding: 3rem;
 	}
 
-	&__home {
-		position: relative;
-		display: inline-block;
-		padding: 0.5rem 1rem;
+	&__home,
+	&-links__link, 
+	&-items__item {
 		color: $theme-color;
-		font-family: $black-italic-font;
-		text-decoration: none;
+		font-family: $bold-italic-font;
 		text-transform: uppercase;
-		transition: color 0.3s;
+		text-decoration: none;
+	}
+
+	&__home {
+		font-family: $black-italic-font;
+		font-size: 2.4rem;
 
 		span {
 			color: $second-color;
-			transition: color 0.3s;
 		}
 	}
 
-	&__links {
-		a {
-			display: inline;
+	&-links {
+		&__link {
+			display: none;
 			position: relative;
 			padding: 0.5rem 1rem;
-			color: $theme-color;
-			font-family: $bold-italic-font;
-			text-transform: uppercase;
-			text-decoration: none;
 			transition: color 0.3s;
-			z-index: 500;
+
+			&:hover {
+				color: $white;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				height: 0%;
+				width: 100%;
+				background-color: $theme-color;
+				transition: height 0.2s;
+				z-index: -1;
+			}
+
+			&:hover::before {
+				height: 100%;
+			}
 		}
 	}
 
-	&__links > a:hover,
-	&__home:hover,
-	&__home:hover > span {
-		color: $white;
-	}
-
-	&__links > a::before,
-	&__home::before {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		height: 0%;
-		width: 100%;
-		background-color: $theme-color;
-		transition: height 0.2s;
-		z-index: -1;
-	}
-
-	&__links > a:hover::before,
-	&__home:hover::before {
-		height: 100%;
-	}
-
-	.nav-btn {
+	&-btn {
 		position: fixed;
-		top: 2rem;
-		right: 2rem;
-		padding: 1rem;
+		top: 1rem;
+		right: 1rem;
+		padding: 2rem;
 		border: 2px solid transparent;
 		background: transparent;
 		cursor: pointer;
@@ -104,5 +97,18 @@
 				top: 25px;
 			}
 		}
+	}
+
+	&-items {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: tomato;
 	}
 }
