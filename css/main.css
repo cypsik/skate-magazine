@@ -93,7 +93,7 @@ body {
   transition: color 0.3s;
 }
 .nav__links a {
-  display: none;
+  display: inline;
   position: relative;
   padding: 0.5rem 1rem;
   color: #00235b;
@@ -101,7 +101,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   transition: color 0.3s;
-  z-index: 5;
+  z-index: 500;
 }
 .nav__links > a:hover, .nav__home:hover, .nav__home:hover > span {
   color: #ffffff;
