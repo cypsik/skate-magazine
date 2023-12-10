@@ -72,6 +72,9 @@ body {
   width: 100%;
   z-index: 1;
 }
+.nav-active {
+  transform: translateX(0);
+}
 .nav-container {
   display: flex;
   align-items: center;
@@ -167,15 +170,31 @@ body {
 }
 .nav-items {
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
-  flex-direction: column;
   position: fixed;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: tomato;
+  overflow: hidden;
+  background-color: #ffffff;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.nav-items__decoration {
+  position: absolute;
+  left: 0;
+  transform: translateX(-50%);
+  height: 90%;
+}
+.nav-items__box {
+  text-align: right;
+}
+.nav-items__item {
+  padding: 3rem 4rem;
+  display: block;
+  font-size: 2.8rem;
 }
 
 .header {

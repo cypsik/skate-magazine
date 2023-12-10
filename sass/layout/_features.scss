@@ -10,6 +10,6 @@
 	&::after {
 		content: '';
 		@include hero-bg;
-		background-color: $theme-color-opacity-80;
+		background-color: $theme-color-80;
 	}
 }

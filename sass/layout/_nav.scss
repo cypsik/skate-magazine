@@ -6,6 +6,10 @@
 	width: 100%;
 	z-index: 1;
 
+	&-active {
+		transform: translateX(0);
+	}
+
 	&-container {
 		display: flex;
 		align-items: center;
@@ -14,7 +18,7 @@
 	}
 
 	&__home,
-	&-links__link, 
+	&-links__link,
 	&-items__item {
 		color: $theme-color;
 		font-family: $bold-italic-font;
@@ -101,14 +105,33 @@
 
 	&-items {
 		display: flex;
-		justify-content: center;
+		justify-content: right;
 		align-items: center;
-		flex-direction: column;
 		position: fixed;
 		top: 0;
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background-color: tomato;
+		overflow: hidden;
+		background-color: $white;
+		transform: translateX(100%);
+		transition: transform 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+		&__decoration {
+			position: absolute;
+			left: 0;
+			transform: translateX(-50%);
+			height: 90%;
+		}
+
+		&__box {
+			text-align: right;
+		}
+
+		&__item {
+			padding: 3rem 4rem;
+			display: block;
+			font-size: 2.8rem;
+		}
 	}
 }
