@@ -25,8 +25,7 @@
 
 	&__home {
 		font-family: $black-italic-font;
-		font-size: 2.4rem;
-
+		font-size: 2rem;
 		span {
 			color: $second-color;
 		}
@@ -65,7 +64,7 @@
 		position: fixed;
 		top: 1rem;
 		right: 1rem;
-		padding: 2rem;
+		padding: 1.8rem;
 		border: 2px solid transparent;
 		background: transparent;
 		cursor: pointer;
@@ -83,21 +82,22 @@
 			height: 30px;
 		}
 
-		&__bars {
+		&__bars,
+		&__bars::before,
+		&__bars::after {
 			@include nav-bars;
+		}
 
-			&:before {
-				content: '';
-				@include nav-bars;
+		&__bars {
+			&::before {
 				top: 12.5px;
 			}
 
-			&:after {
-				content: '';
-				@include nav-bars;
+			&::after {
 				top: 25px;
 			}
 		}
+
 	}
 
 	&-items {
@@ -135,4 +135,10 @@
 	&-active {
 		transform: translateX(0);
 	}
+}
+
+.light-colors,
+.light-colors::before,
+.light-colors::after {
+	background-color: $white;
 }

@@ -98,7 +98,7 @@ body {
 }
 .nav__home {
   font-family: "robotoblack_italic", sans-serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
 }
 .nav__home span {
   color: #005ccc;
@@ -130,7 +130,7 @@ body {
   position: fixed;
   top: 1rem;
   right: 1rem;
-  padding: 2rem;
+  padding: 1.8rem;
   border: 2px solid transparent;
   background: transparent;
   cursor: pointer;
@@ -146,35 +146,19 @@ body {
   width: 35px;
   height: 30px;
 }
-.nav-btn__bars {
+.nav-btn__bars, .nav-btn__bars::before, .nav-btn__bars::after {
+  content: "";
   position: absolute;
   left: 0;
-  top: 0;
   width: 100%;
   height: 5px;
   background-color: #00235b;
   border-radius: 100px;
 }
-.nav-btn__bars:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 5px;
-  background-color: #00235b;
-  border-radius: 100px;
+.nav-btn__bars::before {
   top: 12.5px;
 }
-.nav-btn__bars:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 5px;
-  background-color: #00235b;
-  border-radius: 100px;
+.nav-btn__bars::after {
   top: 25px;
 }
 .nav-items {
@@ -207,6 +191,12 @@ body {
 }
 .nav-active {
   transform: translateX(0);
+}
+
+.light-colors,
+.light-colors::before,
+.light-colors::after {
+  background-color: #ffffff;
 }
 
 .header {
@@ -285,6 +275,14 @@ body {
   background-color: #00235b;
 }
 
+@media (min-width: 375px) {
+  .nav__home {
+    font-size: 2.4rem;
+  }
+  .nav-btn {
+    padding: 2rem;
+  }
+}
 @media (min-width: 768px) {
   .nav .nav-btn {
     display: none;
