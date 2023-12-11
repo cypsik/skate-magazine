@@ -57,7 +57,6 @@ body {
   position: relative;
   font-family: "roboto", sans-serif;
   font-size: 1.8rem;
-  background-color: #333;
 }
 
 .wrapper {
@@ -100,7 +99,7 @@ body {
   font-family: "robotoblack_italic", sans-serif;
   font-size: 2rem;
 }
-.nav__home span {
+.nav__home .magazine {
   color: #005ccc;
 }
 .nav-links__link {
@@ -193,10 +192,14 @@ body {
   transform: translateX(0);
 }
 
-.light-colors,
-.light-colors::before,
-.light-colors::after {
+.light-background-color,
+.light-background-color::before,
+.light-background-color::after {
   background-color: #ffffff;
+}
+
+.light-color {
+  color: #ffffff;
 }
 
 .header {

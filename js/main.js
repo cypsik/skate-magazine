@@ -4,7 +4,8 @@ const navBars = document.querySelector('.nav-btn__bars');
 const allNavItems = document.querySelectorAll('.nav-items__item');
 const navLinks = document.querySelectorAll('.nav-links__link');
 const navLogo = document.querySelector('.nav__home');
-const whiteSection = document.querySelector('.white-section')
+const allSections = document.querySelectorAll('.section');
+const magazine = document.querySelector('.magazine');
 // const footerYear = document.querySelector('.footeryear')
 
 const handleNav = () => {
@@ -40,9 +41,24 @@ const deleteAnimation = () => {
 const handleObserver = () => {
 	const currentSection = window.scrollY;
 
-	if (section.classList.contains('white-section') && section.offsetTop <= currentSection) {
-		
-	}
-}
+	allSections.forEach((section) => {
+		if (
+			section.classList.contains('dark-section') &&
+			section.offsetTop <= currentSection + 60
+		) {
+			navBars.classList.add('light-background-color');
+			navLogo.classList.add('light-color');
+			magazine.classList.add('light-color');
+		} else if (
+			!section.classList.contains('dark-section') &&
+			section.offsetTop <= currentSection + 60
+		) {
+			navBars.classList.remove('light-background-color');
+			navLogo.classList.remove('light-color');
+			magazine.classList.remove('light-color');
+		}
+	});
+};
 
 navItemsBtn.addEventListener('click', handleNav);
+window.addEventListener('scroll', handleObserver);

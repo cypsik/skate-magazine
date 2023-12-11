@@ -26,7 +26,8 @@
 	&__home {
 		font-family: $black-italic-font;
 		font-size: 2rem;
-		span {
+		
+		.magazine {
 			color: $second-color;
 		}
 	}
@@ -97,7 +98,6 @@
 				top: 25px;
 			}
 		}
-
 	}
 
 	&-items {
@@ -137,8 +137,12 @@
 	}
 }
 
-.light-colors,
-.light-colors::before,
-.light-colors::after {
+.light-background-color,
+.light-background-color::before,
+.light-background-color::after {
 	background-color: $white;
+}
+
+.light-color {
+	color: $white;
 }
