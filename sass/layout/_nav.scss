@@ -1,14 +1,11 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+@use '../abstracts/animations' as *;
 
 .nav {
 	position: fixed;
 	width: 100%;
 	z-index: 1;
-
-	&-active {
-		transform: translateX(0);
-	}
 
 	&-container {
 		display: flex;
@@ -133,5 +130,9 @@
 			display: block;
 			font-size: 2.8rem;
 		}
+	}
+
+	&-active {
+		transform: translateX(0);
 	}
 }

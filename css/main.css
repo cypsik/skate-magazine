@@ -67,13 +67,22 @@ body {
   width: 100%;
 }
 
+@keyframes navItemsAnimation {
+  from {
+    transform: translateX(200%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.nav-items-animation {
+  animation: navItemsAnimation 1s;
+}
+
 .nav {
   position: fixed;
   width: 100%;
   z-index: 1;
-}
-.nav-active {
-  transform: translateX(0);
 }
 .nav-container {
   display: flex;
@@ -195,6 +204,9 @@ body {
   padding: 3rem 4rem;
   display: block;
   font-size: 2.8rem;
+}
+.nav-active {
+  transform: translateX(0);
 }
 
 .header {
