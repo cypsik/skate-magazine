@@ -17,6 +17,12 @@ const handleNav = () => {
 		});
 	});
 
+	// musisz spowodować żeby barsy zmieniały kolor z białych na theme-color kiedy pojawia się menu
+
+	if (navBars.classList.contains('light-background-color')) {
+		navBars.classList.toggle('light-background-color');
+	}
+
 	handleNavItemsAnimation();
 	deleteAnimation();
 };
@@ -48,6 +54,7 @@ const handleObserver = () => {
 		) {
 			navBars.classList.add('light-background-color');
 			navLogo.classList.add('light-color');
+			magazine.classList.remove('magazine');
 			magazine.classList.add('light-color');
 		} else if (
 			!section.classList.contains('dark-section') &&
@@ -55,6 +62,7 @@ const handleObserver = () => {
 		) {
 			navBars.classList.remove('light-background-color');
 			navLogo.classList.remove('light-color');
+			magazine.classList.add('magazine');
 			magazine.classList.remove('light-color');
 		}
 	});
