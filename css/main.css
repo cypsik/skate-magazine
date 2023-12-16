@@ -118,12 +118,9 @@ body {
   left: 0;
   height: 0%;
   width: 100%;
-  background-color: #00235b;
   transition: height 0.2s;
   z-index: -1;
-}
-.nav-links__link:hover::before {
-  height: 100%;
+  background-color: #00235b;
 }
 .nav-btn {
   position: fixed;
@@ -192,14 +189,26 @@ body {
   transform: translateX(0);
 }
 
+.light-links::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  transition: height 0.2s;
+  z-index: -1;
+  background-color: #ffffff;
+}
+
+.light-links:hover::before, .nav-links__link:hover::before {
+  height: 100%;
+}
+
 .light-background-color,
 .light-background-color::before,
 .light-background-color::after {
   background-color: #ffffff;
-}
-
-.light-color {
-  color: #ffffff;
 }
 
 .header {

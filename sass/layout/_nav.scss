@@ -44,19 +44,8 @@
 			}
 
 			&::before {
-				content: '';
-				position: absolute;
-				bottom: 0;
-				left: 0;
-				height: 0%;
-				width: 100%;
+				@include desktopLinks;
 				background-color: $theme-color;
-				transition: height 0.2s;
-				z-index: -1;
-			}
-
-			&:hover::before {
-				height: 100%;
 			}
 		}
 	}
@@ -137,12 +126,19 @@
 	}
 }
 
+.light-links {
+	&::before {
+		@include desktopLinks;
+		background-color: $white;
+	}
+}
+
+.light-links:hover::before, .nav-links__link:hover::before {
+	height: 100%;
+}
+
 .light-background-color,
 .light-background-color::before,
 .light-background-color::after {
 	background-color: $white;
-}
-
-.light-color {
-	color: $white;
 }

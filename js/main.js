@@ -17,12 +17,6 @@ const handleNav = () => {
 		});
 	});
 
-	// musisz spowodować żeby barsy zmieniały kolor z białych na theme-color kiedy pojawia się menu
-
-	if (navBars.classList.contains('light-background-color')) {
-		navBars.classList.toggle('light-background-color');
-	}
-
 	handleNavItemsAnimation();
 	deleteAnimation();
 };
@@ -44,26 +38,32 @@ const deleteAnimation = () => {
 	});
 };
 
+const handleLightColor = () => {
+	navBars.classList.toggle('light-background-color');
+}
+
 const handleObserver = () => {
 	const currentSection = window.scrollY;
 
 	allSections.forEach((section) => {
-		if (
-			section.classList.contains('dark-section') &&
-			section.offsetTop <= currentSection + 60
-		) {
-			navBars.classList.add('light-background-color');
-			navLogo.classList.add('light-color');
-			magazine.classList.remove('magazine');
-			magazine.classList.add('light-color');
-		} else if (
-			!section.classList.contains('dark-section') &&
-			section.offsetTop <= currentSection + 60
-		) {
-			navBars.classList.remove('light-background-color');
-			navLogo.classList.remove('light-color');
-			magazine.classList.add('magazine');
-			magazine.classList.remove('light-color');
+		const isDarkSection = section.classList.contains('dark-section');
+
+		if (section.offsetTop <= currentSection + 60) {
+			navBars.classList.toggle('light-background-color', isDarkSection);
+			navLogo.style.color = isDarkSection ? '#fff' : '';
+			magazine.style.color = isDarkSection ? '#fff' : '';
+
+			navLinks.forEach((link) => {
+				link.style.transition = 'none';
+				link.style.color = isDarkSection ? '#fff' : '';
+				link.classList.toggle('light-links', isDarkSection);
+			});
+
+			setTimeout(() => {
+				navLinks.forEach((link) => {
+					link.style.transition = ''; // Usuwanie ustawienia przejścia
+				});
+			}, 10);
 		}
 	});
 };
