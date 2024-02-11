@@ -99,9 +99,6 @@ body {
   font-family: "robotoblack_italic", sans-serif;
   font-size: 2rem;
 }
-.nav .magazine {
-  color: #005ccc;
-}
 .nav-links__link {
   display: none;
   position: relative;
@@ -132,7 +129,6 @@ body {
   cursor: pointer;
   border-radius: 1rem;
   z-index: 1000;
-  transition: border 0.3s;
 }
 .nav-btn:focus {
   border: 2px solid #00235b;
@@ -201,14 +197,26 @@ body {
   background-color: #ffffff;
 }
 
+.light-links:hover {
+  color: #00235b;
+}
+
 .light-links:hover::before, .nav-links__link:hover::before {
   height: 100%;
+}
+
+.light-color {
+  color: #ffffff;
 }
 
 .light-background-color,
 .light-background-color::before,
 .light-background-color::after {
   background-color: #ffffff;
+}
+
+.light-btn:focus {
+  border: 2px solid #ffffff;
 }
 
 .header {

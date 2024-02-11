@@ -28,10 +28,6 @@
 		font-size: 2rem;
 	}
 
-	.magazine {
-		color: $second-color;
-	}
-
 	&-links {
 		&__link {
 			display: none;
@@ -60,7 +56,6 @@
 		cursor: pointer;
 		border-radius: 1rem;
 		z-index: 1000;
-		transition: border 0.3s;
 
 		&:focus {
 			border: 2px solid $theme-color;
@@ -133,12 +128,24 @@
 	}
 }
 
+.light-links:hover {
+	color: $theme-color;
+}
+
 .light-links:hover::before, .nav-links__link:hover::before {
 	height: 100%;
+}
+
+.light-color {
+	color: $white;
 }
 
 .light-background-color,
 .light-background-color::before,
 .light-background-color::after {
 	background-color: $white;
+}
+
+.light-btn:focus {
+	border: 2px solid $white;
 }

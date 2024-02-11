@@ -5,8 +5,7 @@ const allNavItems = document.querySelectorAll('.nav-items__item');
 const navLinks = document.querySelectorAll('.nav-links__link');
 const navLogo = document.querySelector('.nav__home');
 const allSections = document.querySelectorAll('.section');
-const magazine = document.querySelector('.magazine');
-// const footerYear = document.querySelector('.footeryear')
+const footerYear = document.querySelector('.footeryear');
 
 const handleNav = () => {
 	navItems.classList.toggle('nav-active');
@@ -38,32 +37,26 @@ const deleteAnimation = () => {
 	});
 };
 
-const handleLightColor = () => {
-	navBars.classList.toggle('light-background-color');
-}
-
 const handleObserver = () => {
 	const currentSection = window.scrollY;
 
 	allSections.forEach((section) => {
 		const isDarkSection = section.classList.contains('dark-section');
-
 		if (section.offsetTop <= currentSection + 60) {
 			navBars.classList.toggle('light-background-color', isDarkSection);
-			navLogo.style.color = isDarkSection ? '#fff' : '';
-			magazine.style.color = isDarkSection ? '#fff' : '';
+			navItemsBtn.classList.toggle('light-btn', isDarkSection);
+			navLogo.classList.toggle('light-color', isDarkSection);
+
+			navItemsBtn.addEventListener('click', () => {
+				navBars.classList.toggle('light-background-color');
+				navItemsBtn.classList.toggle('light-btn');
+			});
 
 			navLinks.forEach((link) => {
 				link.style.transition = 'none';
-				link.style.color = isDarkSection ? '#fff' : '';
+				link.classList.toggle('light-color', isDarkSection);
 				link.classList.toggle('light-links', isDarkSection);
 			});
-
-			setTimeout(() => {
-				navLinks.forEach((link) => {
-					link.style.transition = ''; // Usuwanie ustawienia przejścia
-				});
-			}, 10);
 		}
 	});
 };
