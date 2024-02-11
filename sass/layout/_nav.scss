@@ -149,3 +149,13 @@
 .light-btn:focus {
 	border: 2px solid $white;
 }
+
+.dark-btn:focus {
+	border: 2px solid $theme-color;
+}
+
+.dark-background-color,
+.dark-background-color::before,
+.dark-background-color::after {
+	background-color: $theme-color;
+}

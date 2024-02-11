@@ -219,6 +219,16 @@ body {
   border: 2px solid #ffffff;
 }
 
+.dark-btn:focus {
+  border: 2px solid #00235b;
+}
+
+.dark-background-color,
+.dark-background-color::before,
+.dark-background-color::after {
+  background-color: #00235b;
+}
+
 .header {
   position: relative;
   min-height: 75vh;

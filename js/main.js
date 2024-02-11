@@ -10,6 +10,15 @@ const footerYear = document.querySelector('.footeryear');
 const handleNav = () => {
 	navItems.classList.toggle('nav-active');
 
+	const currentSection = window.scrollY
+
+	allSections.forEach(section => {
+		if (section.classList.contains('dark-section') && section.offsetTop <= currentSection) {
+			navBars.classList.toggle('dark-background-color')
+			navItemsBtn.classList.toggle('dark-btn')
+		}
+	})
+
 	allNavItems.forEach((item) => {
 		item.addEventListener('click', () => {
 			navItems.classList.remove('nav-active');
@@ -42,15 +51,10 @@ const handleObserver = () => {
 
 	allSections.forEach((section) => {
 		const isDarkSection = section.classList.contains('dark-section');
-		if (section.offsetTop <= currentSection + 60) {
+		if (section.offsetTop <= currentSection + 30) {
 			navBars.classList.toggle('light-background-color', isDarkSection);
 			navItemsBtn.classList.toggle('light-btn', isDarkSection);
 			navLogo.classList.toggle('light-color', isDarkSection);
-
-			navItemsBtn.addEventListener('click', () => {
-				navBars.classList.toggle('light-background-color');
-				navItemsBtn.classList.toggle('light-btn');
-			});
 
 			navLinks.forEach((link) => {
 				link.style.transition = 'none';
