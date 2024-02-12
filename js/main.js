@@ -1,23 +1,47 @@
-const navItems = document.querySelector('.nav-items');
-const navItemsBtn = document.querySelector('.nav-btn');
-const navBars = document.querySelector('.nav-btn__bars');
-const allNavItems = document.querySelectorAll('.nav-items__item');
-const navLinks = document.querySelectorAll('.nav-links__link');
-const navLogo = document.querySelector('.nav__home');
-const allSections = document.querySelectorAll('.section');
-const footerYear = document.querySelector('.footeryear');
+let navItems;
+let navItemsBtn;
+let navBars;
+let allNavItems;
+let navLinks;
+let navLogo;
+let allSections;
+let footerYear;
+
+const main = () => {
+	prepareDOMElements();
+	prepareDOMEvents();
+};
+
+const prepareDOMElements = () => {
+	navItems = document.querySelector('.nav-items');
+	navItemsBtn = document.querySelector('.nav-btn');
+	navBars = document.querySelector('.nav-btn__bars');
+	allNavItems = document.querySelectorAll('.nav-items__item');
+	navLinks = document.querySelectorAll('.nav-links__link');
+	navLogo = document.querySelector('.nav__home');
+	allSections = document.querySelectorAll('.section');
+	footerYear = document.querySelector('.footeryear');
+};
+
+const prepareDOMEvents = () => {
+	navItemsBtn.addEventListener('click', handleNav);
+	window.addEventListener('scroll', handleObserver);
+};
 
 const handleNav = () => {
 	navItems.classList.toggle('nav-active');
 
-	const currentSection = window.scrollY
+	const currentSection = window.scrollY;
 
-	allSections.forEach(section => {
-		if (section.classList.contains('dark-section') && section.offsetTop <= currentSection) {
-			navBars.classList.toggle('dark-background-color')
-			navItemsBtn.classList.toggle('dark-btn')
+	allSections.forEach((section) => {
+		if (
+			section.classList.contains('dark-section') &&
+			section.offsetTop <= currentSection
+		) {
+			navBars.classList.toggle('dark-background-color');
+			navItemsBtn.classList.toggle('dark-btn');
 		}
-	})
+	});
 
 	allNavItems.forEach((item) => {
 		item.addEventListener('click', () => {
@@ -51,7 +75,7 @@ const handleObserver = () => {
 
 	allSections.forEach((section) => {
 		const isDarkSection = section.classList.contains('dark-section');
-		if (section.offsetTop <= currentSection + 30) {
+		if (section.offsetTop <= currentSection + 60) {
 			navBars.classList.toggle('light-background-color', isDarkSection);
 			navItemsBtn.classList.toggle('light-btn', isDarkSection);
 			navLogo.classList.toggle('light-color', isDarkSection);
@@ -65,5 +89,4 @@ const handleObserver = () => {
 	});
 };
 
-navItemsBtn.addEventListener('click', handleNav);
-window.addEventListener('scroll', handleObserver);
+document.addEventListener('DOMContentLoaded', main);
