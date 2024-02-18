@@ -31,17 +31,13 @@ const prepareDOMEvents = () => {
 const handleNav = () => {
 	navItems.classList.toggle('nav-active');
 
-	const currentSection = window.scrollY;
-
-	allSections.forEach((section) => {
-		if (
-			section.classList.contains('dark-section') &&
-			section.offsetTop <= currentSection
-		) {
-			navBars.classList.toggle('dark-background-color');
-			navItemsBtn.classList.toggle('dark-btn');
-		}
-	});
+	if (navBars.classList.contains('light-background-color') && navItemsBtn.classList.contains('light-btn') && navItemsBtn.classList.contains('white')) {
+		navBars.classList.remove('light-background-color');
+		navItemsBtn.classList.remove('light-btn');
+	} else if (!navBars.classList.contains('light-background-color') && !navItemsBtn.classList.contains('light-btn') && navItemsBtn.classList.contains('white')) {
+		navBars.classList.add('light-background-color');
+		navItemsBtn.classList.add('light-btn');
+	}
 
 	allNavItems.forEach((item) => {
 		item.addEventListener('click', () => {
@@ -78,8 +74,9 @@ const handleObserver = () => {
 		if (section.offsetTop <= currentSection + 60) {
 			navBars.classList.toggle('light-background-color', isDarkSection);
 			navItemsBtn.classList.toggle('light-btn', isDarkSection);
-			navLogo.classList.toggle('light-color', isDarkSection);
+			navItemsBtn.classList.toggle('white', isDarkSection)
 
+			navLogo.classList.toggle('light-color', isDarkSection);
 			navLinks.forEach((link) => {
 				link.style.transition = 'none';
 				link.classList.toggle('light-color', isDarkSection);
