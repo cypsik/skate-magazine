@@ -1,3 +1,6 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
 @media (min-width: 768px) {
 	.nav {
 		.nav-btn {
@@ -7,6 +10,24 @@
 		&-links {
 			&__link {
 				display: inline;
+			}
+		}
+
+		&__home {
+			&:hover {
+				color: $white;
+				span {
+					color: $white;
+				}
+			}
+
+			&::before {
+				@include desktopLinks;
+				background-color: $theme-color;
+			}
+
+			&:hover::before {
+				height: 100%;
 			}
 		}
 	}

@@ -2,14 +2,36 @@
 @use '../abstracts/mixins' as *;
 
 body {
-    position: relative;
-    font-family: $regular-font;
-    font-size: 1.8rem;
+	position: relative;
+	font-family: $regular-font;
+	color: $theme-color;
+	font-size: 1.8rem;
+}
+
+section {
+	scroll-margin-top: 73px;
 }
 
 .wrapper {
-    position: relative;
-    margin: 0 auto;
-    max-width: 1200px;
-    width: 100%;
+	position: relative;
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+}
+
+.red-btn {
+	padding: 1rem 5rem;
+	color: $white;
+	background-color: $red-color;
+	font-size: 1.8rem;
+	font-family: 'robotobold';
+	text-transform: uppercase;
+	border: 1px solid transparent;
+	border-radius: 100px;
+	transition: background-color 0.3s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: $dark-red-color;
+	}
 }

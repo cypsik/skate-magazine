@@ -2,6 +2,9 @@
 @use '../abstracts/mixins' as *;
 
 .header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position: relative;
 	min-height: 75vh;
 	background-image: url('../../img/header_bg_small.jpg');
@@ -11,5 +14,80 @@
 		content: '';
 		@include hero-bg;
 		background-color: $white-80;
+	}
+
+	&-container {
+		padding: 10rem 0;
+	}
+
+	&__text {
+		.bestseller {
+			display: inline-block;
+			padding: 0.2rem 1rem;
+			margin-bottom: 1rem;
+			background-color: $turkish-color;
+			text-transform: uppercase;
+			font-family: $bold-italic-font;
+		}
+
+		h1,
+		h2 {
+			font-family: $bold-font;
+		}
+
+		h1 {
+			font-size: 4.5rem;
+			line-height: 4.5rem;
+		}
+
+		h2 {
+			font-size: 2.8rem;
+		}
+	}
+
+	&__card {
+		&--box {
+			position: relative;
+			perspective: 1000px;
+			height: 300px;
+			width: 240px;
+
+			&:hover {
+				.header__card--front {
+					transform: rotateY(0deg);
+					opacity: 0;
+				}
+
+				.header__card--back {
+					transform: rotateY(-180deg);
+					opacity: 1;
+				}
+			}
+		}
+
+		&--front,
+		&--back {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			border-radius: 20px;
+			transition: transform 0.4s, opacity 0.4s;
+		}
+
+		&--front {
+			background-color: black;
+			transform: rotateY(180deg);
+			opacity: 1;
+		}
+
+		&--back {
+			background-color: white;
+			transform: rotateY(0deg);
+			opacity: 0;
+		}
+	}
+
+	&__button {
+		position: relative;
 	}
 }

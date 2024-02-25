@@ -5,13 +5,18 @@
 .nav {
 	position: fixed;
 	width: 100%;
+	transition: background-color 0.4s;
 	z-index: 1;
+
+	&-background {
+		background-color: $white;
+	}
 
 	&-container {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 3rem;
+		padding: 2rem;
 	}
 
 	&__home,
@@ -24,7 +29,14 @@
 	}
 
 	&__home {
-		font-size: 2rem;
+		position: relative;
+		display: inline-block;
+		padding: 0.5rem 1rem;
+		z-index: 1;
+
+		span {
+			color: $second-color;
+		}
 	}
 
 	&-links {
@@ -42,14 +54,18 @@
 				@include desktopLinks;
 				background-color: $theme-color;
 			}
+
+			&:hover::before {
+				height: 100%;
+			}
 		}
 	}
 
 	&-btn {
 		position: fixed;
-		top: 1rem;
+		top: 0.5rem;
 		right: 1rem;
-		padding: 1.8rem;
+		padding: 1.5rem;
 		border: 2px solid transparent;
 		background: transparent;
 		border-radius: 1rem;
@@ -96,8 +112,9 @@
 
 		&__decoration {
 			position: absolute;
-			left: 0;
-			transform: translateX(-50%);
+			top: 20%;
+			left: 6%;
+			transform: translateX(-50%) rotate(-10deg);
 			height: 90%;
 		}
 
@@ -115,33 +132,4 @@
 	&-active {
 		transform: translateX(0);
 	}
-}
-
-.light-links {
-	&::before {
-		@include desktopLinks;
-		background-color: $white;
-	}
-}
-
-.light-links:hover {
-	color: $theme-color;
-}
-
-.light-links:hover::before, .nav-links__link:hover::before {
-	height: 100%;
-}
-
-.light-color {
-	color: $white;
-}
-
-.light-background-color,
-.light-background-color::before,
-.light-background-color::after {
-	background-color: $white;
-}
-
-.light-btn:focus {
-	border: 2px solid $white;
 }

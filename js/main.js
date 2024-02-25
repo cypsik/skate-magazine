@@ -1,9 +1,10 @@
+let nav;
+let navHome;
 let navItems;
-let navItemsBtn;
-let navBars;
+let navBtn;
+let navBtnBars;
 let allNavItems;
-let navLinks;
-let navLogo;
+let allNavLinks;
 let allSections;
 let footerYear;
 
@@ -13,31 +14,25 @@ const main = () => {
 };
 
 const prepareDOMElements = () => {
+	nav = document.querySelector('.nav');
+	navHome = document.querySelector('.nav__home');
 	navItems = document.querySelector('.nav-items');
-	navItemsBtn = document.querySelector('.nav-btn');
-	navBars = document.querySelector('.nav-btn__bars');
+	navBtn = document.querySelector('.nav-btn');
+	navBtnBars = document.querySelector('.nav-btn__bars');
 	allNavItems = document.querySelectorAll('.nav-items__item');
-	navLinks = document.querySelectorAll('.nav-links__link');
-	navLogo = document.querySelector('.nav__home');
+	allNavLinks = document.querySelectorAll('.nav-links__link');
 	allSections = document.querySelectorAll('.section');
 	footerYear = document.querySelector('.footeryear');
 };
 
 const prepareDOMEvents = () => {
-	navItemsBtn.addEventListener('click', handleNav);
+	navBtn.addEventListener('click', handleNav);
+	navHome.addEventListener('click', homeClosing);
 	window.addEventListener('scroll', handleObserver);
 };
 
 const handleNav = () => {
 	navItems.classList.toggle('nav-active');
-
-	if (navBars.classList.contains('light-background-color') && navItemsBtn.classList.contains('light-btn') && navItemsBtn.classList.contains('white')) {
-		navBars.classList.remove('light-background-color');
-		navItemsBtn.classList.remove('light-btn');
-	} else if (!navBars.classList.contains('light-background-color') && !navItemsBtn.classList.contains('light-btn') && navItemsBtn.classList.contains('white')) {
-		navBars.classList.add('light-background-color');
-		navItemsBtn.classList.add('light-btn');
-	}
 
 	allNavItems.forEach((item) => {
 		item.addEventListener('click', () => {
@@ -47,6 +42,14 @@ const handleNav = () => {
 
 	handleNavItemsAnimation();
 	deleteAnimation();
+};
+
+const homeClosing = () => {
+	navItems.classList.remove('nav-active');
+
+	allNavItems.forEach((item) => {
+		item.classList.remove('nav-items-animation');
+	});
 };
 
 const handleNavItemsAnimation = () => {
@@ -67,23 +70,11 @@ const deleteAnimation = () => {
 };
 
 const handleObserver = () => {
-	const currentSection = window.scrollY;
-
-	allSections.forEach((section) => {
-		const isDarkSection = section.classList.contains('dark-section');
-		if (section.offsetTop <= currentSection + 60) {
-			navBars.classList.toggle('light-background-color', isDarkSection);
-			navItemsBtn.classList.toggle('light-btn', isDarkSection);
-			navItemsBtn.classList.toggle('white', isDarkSection)
-
-			navLogo.classList.toggle('light-color', isDarkSection);
-			navLinks.forEach((link) => {
-				link.style.transition = 'none';
-				link.classList.toggle('light-color', isDarkSection);
-				link.classList.toggle('light-links', isDarkSection);
-			});
-		}
-	});
+	if (window.scrollY > 90) {
+		nav.classList.add('nav-background');
+	} else {
+		nav.classList.remove('nav-background');
+	}
 };
 
 document.addEventListener('DOMContentLoaded', main);

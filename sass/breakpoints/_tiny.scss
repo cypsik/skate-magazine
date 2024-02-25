@@ -1,11 +1,19 @@
 @media (min-width: 375px) {
-    .nav {
-        &__home {
-            font-size: 2.4rem;
+	section {
+		scroll-margin-top: 81px;
+	}
+
+	.nav {
+        &-decoration {
+            left: 15%;
         }
 
-        &-btn {
-            padding: 2rem;
-        }
-    }
+		&__home {
+			font-size: 2.4rem;
+		}
+
+		&-btn {
+			padding: 2rem;
+		}
+	}
 }
