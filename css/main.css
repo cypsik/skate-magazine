@@ -270,11 +270,11 @@ section {
   width: 240px;
 }
 .header__card--box:hover .header__card--front {
-  transform: rotateY(0deg);
+  transform: rotateY(180deg);
   opacity: 0;
 }
 .header__card--box:hover .header__card--back {
-  transform: rotateY(-180deg);
+  transform: rotateY(0);
   opacity: 1;
 }
 .header__card--front, .header__card--back {
@@ -282,16 +282,43 @@ section {
   height: 100%;
   width: 100%;
   border-radius: 20px;
+  overflow: hidden;
   transition: transform 0.4s, opacity 0.4s;
 }
 .header__card--front {
-  background-color: black;
-  transform: rotateY(180deg);
+  padding: 1.8rem 1.8rem 0;
+  background-image: url("../../img/card_pattern.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(0deg);
   opacity: 1;
+  z-index: 0;
+}
+.header__card--front::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
+.header__card--front-image {
+  width: 100%;
+  z-index: 1;
+}
+.header__card--front p {
+  text-align: center;
+  font-family: "kaushan_script", sans-serif;
+  font-size: 4rem;
+  line-height: 5rem;
+  color: #ffffff;
 }
 .header__card--back {
-  background-color: white;
-  transform: rotateY(0deg);
+  background-image: url("../../img/card_back.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  border: 5px solid #00235b;
+  transform: rotateY(-180deg);
   opacity: 0;
 }
 .header__button {
@@ -365,6 +392,13 @@ section {
     height: 396px;
     width: 280px;
   }
+  .header__card--front {
+    padding: 2rem 2rem 0;
+  }
+  .header__card--front p {
+    font-size: 4.8rem;
+    line-height: 5.8rem;
+  }
   .header__text .bestseller {
     padding: 0.3rem 1.3rem;
     font-size: 2rem;
@@ -421,6 +455,10 @@ section {
   .header__card--box {
     height: 425px;
     width: 300px;
+  }
+  .header__card--front p {
+    font-size: 5rem;
+    line-height: 6.2rem;
   }
   .header__text .bestseller {
     padding: 0.3rem 1.5rem;

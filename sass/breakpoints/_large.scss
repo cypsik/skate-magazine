@@ -5,6 +5,13 @@
 				height: 425px;
 				width: 300px;
 			}
+
+            &--front {
+                p {
+                    font-size: 5rem;
+                    line-height: 6.2rem;
+                }
+            }
 		}
 
 		&__text {
