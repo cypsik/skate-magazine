@@ -1,2 +1,26 @@
 @media (min-width: 992px) {
+	.header {
+		&__card {
+			&--box {
+				height: 425px;
+				width: 300px;
+			}
+		}
+
+		&__text {
+            .bestseller {
+                padding: 0.3rem 1.5rem;
+                font-size: 2.4rem;
+            }
+
+			h1 {
+				font-size: 6.9rem;
+				line-height: 6.9rem;
+			}
+
+            h2 {
+                font-size: 4.3rem;
+            }
+		}
+	}
 }
