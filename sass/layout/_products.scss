@@ -1,6 +1,64 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .products {
-	min-height: 100vh;
+	position: relative;
 	background-color: $yellow-color;
+
+	h3 {
+		color: $second-color;
+	}
+
+	&__container {
+		height: 100%;
+	}
+
+	&__panel {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 200px;
+		z-index: 0;
+		cursor: pointer;
+
+		p {
+			text-align: center;
+			text-transform: uppercase;
+			font-family: $bold-italic-font;
+			font-size: 3.6rem;
+			color: $white;
+		}
+
+		&::before {
+			content: '';
+			@include hero-bg;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+	}
+
+	.wheels,
+	.decks,
+	.trucks,
+	.accessories {
+		background-position: center;
+		background-size: cover;
+	}
+
+	.wheels {
+		background-image: url('../../img/wheels_small.jpg');
+	}
+
+	.decks {
+		background-image: url('../../img/decks_small.jpg');
+	}
+
+	.trucks {
+		background-image: url('../../img/trucks_big.jpg');
+	}
+
+	.accessories {
+		background-image: url('../../img/accessories_big.jpeg');
+	}
 }

@@ -1,33 +1,57 @@
 @media (min-width: 992px) {
 	.header {
+		&-container {
+			padding: 0 9rem;
+		}
+
 		&__card {
 			&--box {
 				height: 425px;
 				width: 300px;
 			}
 
-            &--front {
-                p {
-                    font-size: 5rem;
-                    line-height: 6.2rem;
-                }
-            }
+			&--front {
+				p {
+					font-size: 5rem;
+					line-height: 6.2rem;
+				}
+			}
 		}
 
 		&__text {
-            .bestseller {
-                padding: 0.3rem 1.5rem;
-                font-size: 2.4rem;
-            }
+			.bestseller {
+				padding: 0.3rem 1.5rem;
+				font-size: 2.4rem;
+			}
 
 			h1 {
 				font-size: 6.9rem;
 				line-height: 6.9rem;
 			}
 
-            h2 {
-                font-size: 4.3rem;
-            }
+			h2 {
+				font-size: 4.3rem;
+			}
+		}
+	}
+
+	.products {
+		height: 100vh;
+
+		&__panels {
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: repeat(4, 180px);
+			row-gap: 2rem;
+			padding: 0 6rem;
+		}
+
+		&__panel {
+			grid-column: 9 / 13;
+			padding-bottom: 0;
+
+			p {
+				font-size: 3.4rem;
+			}
 		}
 	}
 }

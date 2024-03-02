@@ -1,3 +1,4 @@
+let html;
 let nav;
 let navHome;
 let navItems;
@@ -14,6 +15,7 @@ const main = () => {
 };
 
 const prepareDOMElements = () => {
+	html = document.querySelector('html');
 	nav = document.querySelector('.nav');
 	navHome = document.querySelector('.nav__home');
 	navItems = document.querySelector('.nav-items');

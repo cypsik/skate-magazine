@@ -1,2 +1,11 @@
 @media (min-width: 576px) {
+	.products {
+		&__panel {
+			height: 320px;
+
+			p {
+				font-size: 5.6rem;
+			}
+		}
+	}
 }

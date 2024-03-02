@@ -92,10 +92,8 @@
 
 			&::before {
 				content: '';
-				position: absolute;
-				inset: 0;
+				@include hero-bg;
 				background-color: rgba(0, 0, 0, 0.6);
-				z-index: -1;
 			}
 
 			&-image {

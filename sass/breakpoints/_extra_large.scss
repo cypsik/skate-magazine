@@ -1,0 +1,13 @@
+@media (min-width: 1200px) {
+	.products {
+		&__panels {
+			grid-template-rows: repeat(4, 230px);
+		}
+
+		&__panel {
+			p {
+				font-size: 4rem;
+			}
+		}
+	}
+}
