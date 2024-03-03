@@ -8,6 +8,10 @@
 	transition: background-color 0.4s;
 	z-index: 1;
 
+	&-items-animation {
+		animation: navItemsAnimation 1s;
+	}
+
 	&-background {
 		background-color: $white;
 	}

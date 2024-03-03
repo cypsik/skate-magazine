@@ -103,15 +103,22 @@ h3 {
     transform: translateX(0);
   }
 }
-.nav-items-animation {
-  animation: navItemsAnimation 1s;
+@keyframes floatingBoard {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-3%);
+  }
 }
-
 .nav {
   position: fixed;
   width: 100%;
   transition: background-color 0.4s;
   z-index: 1;
+}
+.nav-items-animation {
+  animation: navItemsAnimation 1s;
 }
 .nav-background {
   background-color: #ffffff;
@@ -353,11 +360,18 @@ h3 {
   align-items: center;
   width: 100%;
   height: 200px;
+  overflow: hidden;
   z-index: 0;
   cursor: pointer;
 }
+.products__panel-img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+  z-index: -2;
+}
 .products__panel p {
-  position: relative;
+  position: absolute;
   text-align: center;
   text-transform: uppercase;
   font-family: "robotobold_italic", sans-serif;
@@ -376,6 +390,9 @@ h3 {
   background-color: #ffffff;
   transition: transform 0.3s;
 }
+.products__panel:hover .products__panel-img {
+  transform: scale(1.2);
+}
 .products__panel:hover p::before {
   transform: scaleX(100%);
   transform-origin: left;
@@ -387,9 +404,10 @@ h3 {
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.5);
   transition: background-color 0.3s;
+  z-index: -1;
 }
 .products__panel:hover::before {
-  background-color: rgba(151, 222, 213, 0.5);
+  background-color: rgba(151, 222, 213, 0.8);
 }
 .products .wheels,
 .products .decks,
@@ -560,13 +578,14 @@ h3 {
   .products__panels {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 3rem;
     padding: 132px 6rem;
     width: 100%;
   }
   .products__panel {
     height: auto;
-    padding-bottom: 100%;
+    aspect-ratio: 1/1;
   }
   .products__panel p {
     position: absolute;
@@ -609,7 +628,7 @@ h3 {
   }
   .products__panel {
     grid-column: 9/13;
-    padding-bottom: 0;
+    aspect-ratio: auto;
   }
   .products__panel p {
     font-size: 3.4rem;
@@ -624,6 +643,7 @@ h3 {
   }
   .products__skateboard-img {
     height: 100%;
+    animation: 2s floatingBoard ease-in-out infinite alternate;
   }
   .products__skateboard-txt {
     position: absolute;
