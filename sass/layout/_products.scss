@@ -13,6 +13,10 @@
 		height: 100%;
 	}
 
+	&__skateboard {
+		display: none;
+	}
+
 	&__panel {
 		position: relative;
 		display: flex;
@@ -24,17 +28,43 @@
 		cursor: pointer;
 
 		p {
+			position: relative;
 			text-align: center;
 			text-transform: uppercase;
 			font-family: $bold-italic-font;
 			font-size: 3.6rem;
 			color: $white;
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				height: 5px;
+				width: 100%;
+				transform: scaleX(0);
+				transform-origin: right;
+				background-color: $white;
+				transition: transform 0.3s;
+			}
+		}
+
+		&:hover {
+			p::before {
+				transform: scaleX(100%);
+				transform-origin: left;
+			}
 		}
 
 		&::before {
 			content: '';
 			@include hero-bg;
 			background-color: rgba(0, 0, 0, 0.5);
+			transition: background-color 0.3s;
+		}
+
+		&:hover::before {
+			background-color: rgba(151, 222, 213, 0.5);
 		}
 	}
 

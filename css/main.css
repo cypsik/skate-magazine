@@ -343,6 +343,9 @@ h3 {
 .products__container {
   height: 100%;
 }
+.products__skateboard {
+  display: none;
+}
 .products__panel {
   position: relative;
   display: flex;
@@ -354,11 +357,28 @@ h3 {
   cursor: pointer;
 }
 .products__panel p {
+  position: relative;
   text-align: center;
   text-transform: uppercase;
   font-family: "robotobold_italic", sans-serif;
   font-size: 3.6rem;
   color: #ffffff;
+}
+.products__panel p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  background-color: #ffffff;
+  transition: transform 0.3s;
+}
+.products__panel:hover p::before {
+  transform: scaleX(100%);
+  transform-origin: left;
 }
 .products__panel::before {
   content: "";
@@ -366,6 +386,10 @@ h3 {
   inset: 0;
   z-index: -1;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s;
+}
+.products__panel:hover::before {
+  background-color: rgba(151, 222, 213, 0.5);
 }
 .products .wheels,
 .products .decks,
@@ -590,6 +614,24 @@ h3 {
   .products__panel p {
     font-size: 3.4rem;
   }
+  .products__skateboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    grid-column: 1/7;
+    grid-row: 1/5;
+  }
+  .products__skateboard-img {
+    height: 100%;
+  }
+  .products__skateboard-txt {
+    position: absolute;
+    top: 38%;
+    font-family: "robotobold", sans-serif;
+    font-size: 8rem;
+    color: #97ded5;
+  }
 }
 @media (min-width: 1200px) {
   .products__panels {
@@ -597,5 +639,8 @@ h3 {
   }
   .products__panel p {
     font-size: 4rem;
+  }
+  .products__skateboard-txt {
+    font-size: 11rem;
   }
 }/*# sourceMappingURL=main.css.map */

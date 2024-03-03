@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as *;
+
 @media (min-width: 992px) {
 	.header {
 		&-container {
@@ -51,6 +53,27 @@
 
 			p {
 				font-size: 3.4rem;
+			}
+		}
+
+		&__skateboard {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			grid-column: 1 / 7;
+			grid-row: 1 / 5;
+
+			&-img {
+				height: 100%;
+			}
+
+			&-txt {
+				position: absolute;
+				top: 38%;
+				font-family: $bold-font;
+				font-size: 8rem;
+				color: $turkish-color;
 			}
 		}
 	}
