@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as *;
 
 .delivery {
+	position: relative;
 	min-height: 100vh;
 	background-color: $white;
 }

@@ -3,7 +3,7 @@
 @media (min-width: 992px) {
 	.header {
 		&-container {
-			padding: 0 9rem;
+			padding: 18rem 9rem;
 		}
 
 		&__card {
@@ -38,13 +38,10 @@
 	}
 
 	.products {
-		height: 100vh;
-
 		&__panels {
 			grid-template-columns: repeat(12, 1fr);
 			grid-template-rows: repeat(4, 180px);
 			row-gap: 2rem;
-			padding: 0 6rem;
 		}
 
 		&__panel {
@@ -65,7 +62,6 @@
 
 			&-img {
 				height: 100%;
-				animation: 2s floatingBoard ease-in-out infinite alternate;
 			}
 
 			&-txt {
@@ -74,6 +70,42 @@
 				font-family: $bold-font;
 				font-size: 8rem;
 				color: $turkish-color;
+			}
+		}
+	}
+
+	.features {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		h3 {
+			position: absolute;
+		}
+
+		&__container {
+			padding: 132px 6rem;
+		}
+
+		&__cards {
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: 60rem;
+			column-gap: 2rem;
+			padding: 0;
+			width: 100%;
+		}
+
+		&__card {
+			width: 100%;
+		}
+
+		&__text {
+			&-side {
+				display: block;
+			}
+
+			&-bottom {
+				font-size: 3.6rem;
 			}
 		}
 	}

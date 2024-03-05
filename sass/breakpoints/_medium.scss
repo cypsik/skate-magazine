@@ -2,6 +2,10 @@
 @use '../abstracts/mixins' as *;
 
 @media (min-width: 768px) {
+	h3 {
+		width: 100%;
+	}
+
 	.nav {
 		.nav-btn {
 			display: none;
@@ -34,7 +38,7 @@
 
 	.header {
 		&-container {
-			padding: 0 6rem;
+			padding: 15rem 6rem;
 			grid-template-columns: repeat(2, 1fr);
 		}
 
@@ -53,12 +57,11 @@
 	.products {
 		h3 {
 			position: absolute;
-			width: 100%;
 		}
 
 		&__container {
 			display: flex;
-			align-items: center;
+			align-items: flex-start;
 			justify-content: center;
 		}
 
@@ -79,6 +82,19 @@
 				top: 50%;
 				transform: translateY(-50%);
 				font-size: 4.2rem;
+			}
+		}
+	}
+
+	.features {
+		&__cards {
+			grid-template-rows: repeat(3, 300px);
+			padding: 0 6rem 10rem;
+		}
+
+		&__text {
+			&-bottom {
+				font-size: 6.4rem;
 			}
 		}
 	}

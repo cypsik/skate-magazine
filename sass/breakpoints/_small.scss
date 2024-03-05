@@ -8,4 +8,17 @@
 			}
 		}
 	}
+
+	.features {
+		&__cards {
+			padding: 0 4rem 8rem;
+			grid-template-rows: repeat(3, 260px);
+		}
+
+		&__text {
+			&-bottom {
+				font-size: 4.8rem;
+			}
+		}
+	}
 }

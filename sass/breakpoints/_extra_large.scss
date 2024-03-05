@@ -16,4 +16,22 @@
 			}
 		}
 	}
+
+	.features {
+		min-height: 75vh;
+		&__cards {
+			grid-template-rows: 700px;
+		}
+
+		&__text {
+			&-side {
+				p {
+					position: relative;
+					transform: translateX(-20%);
+					padding-bottom: 2rem;
+					font-size: 10rem;
+				}
+			}
+		}
+	}
 }
