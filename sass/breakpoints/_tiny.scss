@@ -66,4 +66,21 @@
 			grid-template-rows: repeat(3, 200px);
 		}
 	}
+
+	.delivery {
+		&__text {
+			font-size: 4.6rem;
+			line-height: 5.6rem;
+		}
+		&__learn {
+			&-icons {
+				justify-content: space-around;
+				font-size: 6.4rem;
+			}
+
+			&-text {
+				font-size: 1.8rem;
+			}
+		}
+	}
 }

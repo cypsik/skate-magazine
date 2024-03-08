@@ -21,4 +21,26 @@
 			}
 		}
 	}
+
+	.delivery {
+		&__container {
+			padding: 0 4rem;
+		}
+
+		&__text {
+			font-size: 6rem;
+			line-height: 7rem;
+		}
+
+		&__learn {
+			&-icons {
+				font-size: 8rem;
+				padding-bottom: 4rem;
+			}
+
+			&-text {
+				font-size: 2.4rem;
+			}
+		}
+	}
 }

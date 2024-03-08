@@ -109,4 +109,45 @@
 			}
 		}
 	}
+
+	.delivery {
+		display: flex;
+		align-items: center;
+		// min-height: 100vh;
+
+		h3 {
+			position: absolute;
+		}
+
+		.br {
+			display: inline;
+		}
+
+		&__container {
+			align-items: flex-start;
+		}
+
+		&__text {
+			padding: 200px 0 150px;
+			font-size: 8rem;
+			line-height: 9rem;
+			text-align: left;
+		}
+
+		&__bottom {
+			padding-bottom: 160px;
+			justify-content: space-between;
+		}
+
+		&__learn {
+			padding: 0;
+			width: 50%;
+		}
+
+		&__image {
+			padding-top: 50px;
+			display: block;
+			width: 40%;
+		}
+	}
 }
