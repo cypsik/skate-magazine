@@ -19,20 +19,41 @@ section {
 	width: 100%;
 }
 
+.red-btn,
+.turkish-btn {
+	text-transform: uppercase;
+	border: 1px solid transparent;
+	border-radius: 100px;
+}
+
 .red-btn {
 	padding: 1rem 5rem;
 	color: $white;
 	background-color: $red-color;
 	font-size: 1.8rem;
 	font-family: 'robotobold';
-	text-transform: uppercase;
-	border: 1px solid transparent;
-	border-radius: 100px;
 	transition: background-color 0.3s;
 	cursor: pointer;
 
 	&:hover {
 		background-color: $dark-red-color;
+	}
+}
+
+.turkish-btn {
+	align-self: center;
+	margin-top: 2rem;
+	padding: 1rem 3rem;
+	font-size: 2rem;
+	letter-spacing: 1px;
+	color: $theme-color;
+	background-color: $turkish-color;
+	transition: background-color 0.3s, color 0.3s;
+	cursor: pointer;
+
+	&:hover {
+		color: $white;
+		background-color: rgb(98, 163, 154);
 	}
 }
 

@@ -71,20 +71,40 @@ section {
   width: 100%;
 }
 
+.red-btn,
+.turkish-btn {
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 100px;
+}
+
 .red-btn {
   padding: 1rem 5rem;
   color: #ffffff;
   background-color: #e11818;
   font-size: 1.8rem;
   font-family: "robotobold";
-  text-transform: uppercase;
-  border: 1px solid transparent;
-  border-radius: 100px;
   transition: background-color 0.3s;
   cursor: pointer;
 }
 .red-btn:hover {
   background-color: #be1414;
+}
+
+.turkish-btn {
+  align-self: center;
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: #00235b;
+  background-color: #97ded5;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+}
+.turkish-btn:hover {
+  color: #ffffff;
+  background-color: rgb(98, 163, 154);
 }
 
 h3 {
@@ -594,6 +614,24 @@ h3 {
   z-index: -1;
   background-color: rgba(255, 255, 255, 0.8);
 }
+.contact__info {
+  padding: 5rem 3rem 10rem;
+  text-align: center;
+  font-size: 2.4rem;
+}
+.contact__info p {
+  padding-bottom: 3rem;
+}
+.contact__info p:last-child {
+  padding: 0;
+}
+.contact__info i {
+  margin-right: 1rem;
+}
+.contact__info .fa-brands {
+  transform: translateY(5px);
+  font-size: 3rem;
+}
 .contact__map {
   position: relative;
   width: 100%;
@@ -622,27 +660,26 @@ h3 {
 }
 .contact__form input,
 .contact__form textarea {
+  border: 2px solid transparent;
   padding: 1rem;
 }
 .contact__form textarea {
   resize: vertical;
 }
-.contact__button {
-  align-self: center;
-  margin-top: 2rem;
-  padding: 1rem 3rem;
-  text-transform: uppercase;
-  font-size: 2rem;
-  color: #00235b;
-  background-color: #97ded5;
-  border: 1px solid transparent;
-  border-radius: 100px;
-  transition: background-color 0.3s, color 0.3s;
-  cursor: pointer;
-}
-.contact__button:hover {
-  color: #ffffff;
-  background-color: rgb(98, 163, 154);
+.contact__popup {
+  display: none;
+  position: fixed;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem;
+  width: 90%;
+  font-size: 2.4rem;
+  text-align: center;
+  background-color: #ffffff;
+  border: 3px solid #00235b;
+  border-radius: 2rem;
+  z-index: 1000;
 }
 
 .footer {
