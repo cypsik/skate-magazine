@@ -111,4 +111,17 @@
 			width: 80%;
 		}
 	}
+
+	.contact {
+		&__fill {
+			margin: 0 auto 10rem;
+			width: 500px;
+		}
+
+		&__form {
+			&-button {
+				align-self: flex-end;
+			}
+		}
+	}
 }

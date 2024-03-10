@@ -43,4 +43,23 @@
 			}
 		}
 	}
+
+	.contact {
+		&__fill {
+			margin: 0 4rem 8rem;
+			border-radius: 2rem;
+		}
+
+		&__form {
+			textarea {
+				height: 300px;
+			}
+		}
+
+		&__map {
+			&-frame {
+				height: 500px;
+			}
+		}
+	}
 }

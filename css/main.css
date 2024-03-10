@@ -95,6 +95,7 @@ section {
   align-self: center;
   margin-top: 2rem;
   padding: 1rem 3rem;
+  font-family: "robotobold", sans-serif;
   font-size: 2rem;
   letter-spacing: 1px;
   color: #00235b;
@@ -626,27 +627,32 @@ h3 {
   padding: 0;
 }
 .contact__info i {
-  margin-right: 1rem;
+  margin-right: 1.5rem;
 }
 .contact__info .fa-brands {
   transform: translateY(5px);
   font-size: 3rem;
 }
-.contact__map {
+.contact__map-frame {
   position: relative;
+  height: 350px;
   width: 100%;
-  aspect-ratio: 1/1;
 }
 .contact__map-inside {
+  display: none;
+}
+.contact__map-outside {
   position: absolute;
   width: 100%;
   height: 100%;
 }
+.contact__fill {
+  padding: 4rem;
+  background-color: #00235b;
+}
 .contact__form {
   display: flex;
   flex-direction: column;
-  padding: 3rem;
-  background-color: #00235b;
 }
 .contact__form label {
   padding: 3rem 0 1rem;
@@ -660,11 +666,18 @@ h3 {
 }
 .contact__form input,
 .contact__form textarea {
-  border: 2px solid transparent;
   padding: 1rem;
+  font-family: "roboto", sans-serif;
+  font-size: 1.6rem;
+  border: 2px solid transparent;
+  border-radius: 5px;
 }
 .contact__form textarea {
+  height: 200px;
   resize: vertical;
+}
+.contact__form-button {
+  margin-top: 4rem;
 }
 .contact__popup {
   display: none;
@@ -743,6 +756,9 @@ h3 {
   .delivery__learn-text {
     font-size: 1.8rem;
   }
+  .contact__form textarea {
+    height: 250px;
+  }
 }
 @media (min-width: 576px) {
   .products__panel {
@@ -771,6 +787,16 @@ h3 {
   }
   .delivery__learn-text {
     font-size: 2.4rem;
+  }
+  .contact__fill {
+    margin: 0 4rem 8rem;
+    border-radius: 2rem;
+  }
+  .contact__form textarea {
+    height: 300px;
+  }
+  .contact__map-frame {
+    height: 500px;
   }
 }
 @media (min-width: 768px) {
@@ -856,6 +882,13 @@ h3 {
   }
   .delivery__learn {
     width: 80%;
+  }
+  .contact__fill {
+    margin: 0 auto 10rem;
+    width: 500px;
+  }
+  .contact__form-button {
+    align-self: flex-end;
   }
 }
 @media (min-width: 992px) {
@@ -970,6 +1003,16 @@ h3 {
     padding-top: 50px;
     display: block;
     width: 40%;
+  }
+  .contact__container {
+    display: flex;
+    justify-content: center;
+  }
+  .contact__info {
+    padding: 5rem 10rem 10rem 0;
+  }
+  .contact__fill {
+    margin: 0 0 10rem;
   }
 }
 @media (min-width: 1200px) {

@@ -155,7 +155,7 @@
         </section>
         <section class="contact section" id="contact">
             <h3>contact</h3>
-            <div class="wrapper contact__container">
+            <div class="contact__container">
                 <div class="contact__info">
                     <p><i class="fa-solid fa-location-dot"></i>New York, Brooklyn 21456</p>
                     <p><i class="fa-solid fa-phone"></i>451-125-1234</p>
@@ -163,24 +163,30 @@
                     <p><i class="fa-brands fa-square-instagram"></i>@skatemagazine</p>
                 </div>
 
-                <form action="" class="contact__form">
-                    <label for="name">name</label>
-                    <input type="text" name="name">
-                    <label for="email">e-mail</label>
-                    <input type="text" name="email">
-                    <label for="message">message</label>
-                    <textarea name="message" id="message" rows="15"></textarea>
-                    <button class="contact__button turkish-btn">send</button>
-                </form>
-
-                <div class="contact__map">
+                <div class="contact__fill">
                     <iframe class="contact__map-inside"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.2263280634957!2d-74.16533439972164!3d40.81333246383925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25582e39cb995%3A0x6e61d15ddf666f0c!2sOur%20Lady%20of%20Mt%20Carmel%20Roman%20Catholic%20Church!5e0!3m2!1sen!2spl!4v1709847619552!5m2!1sen!2spl"
                         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    <form action="" class="contact__form">
+                        <label for="name">name</label>
+                        <input type="text" name="name">
+                        <label for="email">e-mail</label>
+                        <input type="text" name="email">
+                        <label for="message">message</label>
+                        <textarea name="message" id="message"></textarea>
+                        <button class="contact__form-button turkish-btn">send</button>
+                    </form>
                 </div>
             </div>
 
+            <div class="contact__map-frame">
+                <iframe class="contact__map-outside"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.2263280634957!2d-74.16533439972164!3d40.81333246383925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25582e39cb995%3A0x6e61d15ddf666f0c!2sOur%20Lady%20of%20Mt%20Carmel%20Roman%20Catholic%20Church!5e0!3m2!1sen!2spl!4v1709847619552!5m2!1sen!2spl"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </section>
     </main>
 

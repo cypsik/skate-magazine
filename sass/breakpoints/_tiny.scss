@@ -83,4 +83,12 @@
 			}
 		}
 	}
+
+	.contact {
+		&__form {
+			textarea {
+				height: 250px;
+			}
+		}
+	}
 }

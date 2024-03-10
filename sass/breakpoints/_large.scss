@@ -113,7 +113,6 @@
 	.delivery {
 		display: flex;
 		align-items: center;
-		// min-height: 100vh;
 
 		h3 {
 			position: absolute;
@@ -148,6 +147,21 @@
 			padding-top: 50px;
 			display: block;
 			width: 40%;
+		}
+	}
+
+	.contact {
+		&__container {
+			display: flex;
+			justify-content: center;
+		}
+
+		&__info {
+			padding: 5rem 10rem 10rem 0;
+		}
+
+		&__fill {
+			margin: 0 0 10rem;
 		}
 	}
 }
