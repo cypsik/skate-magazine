@@ -129,7 +129,7 @@ h3 {
   position: fixed;
   width: 100%;
   transition: background-color 0.4s;
-  z-index: 1;
+  z-index: 1000;
 }
 .nav-items-animation {
   animation: navItemsAnimation 1s;
@@ -680,9 +680,10 @@ h3 {
   margin-top: 4rem;
 }
 .contact__popup {
-  display: none;
+  display: flex;
+  flex-direction: column;
   position: fixed;
-  top: 100px;
+  top: -400px;
   left: 50%;
   transform: translateX(-50%);
   padding: 2rem;
@@ -692,7 +693,15 @@ h3 {
   background-color: #ffffff;
   border: 3px solid #00235b;
   border-radius: 2rem;
-  z-index: 1000;
+  transition: top 1s ease;
+  z-index: 500;
+}
+.contact__popup .fa-circle-check {
+  padding: 4rem 0;
+  font-size: 10rem;
+}
+.contact__popup-close {
+  margin: 0;
 }
 
 .footer {
@@ -1013,6 +1022,9 @@ h3 {
   }
   .contact__fill {
     margin: 0 0 10rem;
+  }
+  .contact__popup {
+    width: 900px;
   }
 }
 @media (min-width: 1200px) {

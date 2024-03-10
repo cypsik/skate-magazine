@@ -6,7 +6,7 @@
 	position: fixed;
 	width: 100%;
 	transition: background-color 0.4s;
-	z-index: 1;
+	z-index: 1000;
 
 	&-items-animation {
 		animation: navItemsAnimation 1s;

@@ -171,9 +171,9 @@
 
                     <form action="" class="contact__form">
                         <label for="name">name</label>
-                        <input type="text" name="name">
+                        <input type="text" name="name" id="name">
                         <label for="email">e-mail</label>
-                        <input type="text" name="email">
+                        <input type="text" name="email" id="email">
                         <label for="message">message</label>
                         <textarea name="message" id="message"></textarea>
                         <button class="contact__form-button turkish-btn">send</button>
@@ -192,6 +192,7 @@
 
     <div class="contact__popup">
         <p>The message was successfully send!</p>
+        <i class="fa-solid fa-circle-check"></i>
         <button class="contact__popup-close turkish-btn">close</button>
     </div>
 
@@ -202,9 +203,6 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
-        // AOS.init({
-        //     // offset: 1200;
-        // });
     </script>
 
 </body>

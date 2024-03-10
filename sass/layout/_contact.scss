@@ -93,12 +93,10 @@
 	}
 
 	&__popup {
-		display: none;
-		// display: flex;
-		// align-items: center;
-		// flex-direction: column;
+		display: flex;
+		flex-direction: column;
 		position: fixed;
-		top: 100px;
+		top: -400px;
 		left: 50%;
 		transform: translateX(-50%);
 		padding: 2rem;
@@ -108,6 +106,16 @@
 		background-color: $white;
 		border: 3px solid $theme-color;
 		border-radius: 2rem;
-		z-index: 1000;
+		transition: top 1s ease;
+		z-index: 500;
+
+		.fa-circle-check {
+			padding: 4rem 0;
+			font-size: 10rem;
+		}
+
+		&-close {
+			margin: 0;
+		}
 	}
 }

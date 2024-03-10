@@ -6,6 +6,12 @@ let navBtnBars;
 let allNavItems;
 let allNavLinks;
 let allSections;
+let sendBtn;
+let closeBtn;
+let popup;
+let formName;
+let formEmail;
+let formMessage
 let footerYear;
 
 const main = () => {
@@ -22,13 +28,33 @@ const prepareDOMElements = () => {
 	allNavItems = document.querySelectorAll('.nav-items__item');
 	allNavLinks = document.querySelectorAll('.nav-links__link');
 	allSections = document.querySelectorAll('.section');
+	sendBtn = document.querySelector('.contact__form-button');
+	closeBtn = document.querySelector('.contact__popup-close');
+	popup = document.querySelector('.contact__popup');
+	formName = document.querySelector('#name');
+	formEmail = document.querySelector('#email');
+	formMessage = document.querySelector('#message')
 	footerYear = document.querySelector('.footeryear');
 };
 
 const prepareDOMEvents = () => {
+	sendBtn.addEventListener('click', showPopup);
+	closeBtn.addEventListener('click', closePopup);
 	navBtn.addEventListener('click', handleNav);
 	navHome.addEventListener('click', homeClosing);
 	window.addEventListener('scroll', handleObserver);
+};
+
+const showPopup = (e) => {
+	formName.value = '';
+	formEmail.value = '';
+	formMessage.value = '';
+	popup.style.top = '100px';
+	e.preventDefault();
+};
+
+const closePopup = () => {
+	popup.style.top = '-400px';
 };
 
 const handleNav = () => {
