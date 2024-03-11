@@ -2,6 +2,8 @@
 
 @media (min-width: 992px) {
 	.header {
+		background-image: url('../../img/header_bg_big.jpg');
+
 		&-container {
 			padding: 18rem 9rem;
 		}
@@ -78,6 +80,19 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		background-image: url('../../img/features_bg_big.jpg');
+
+		.services {
+			background-image: url('../../img/services_big.jpg');
+		}
+
+		.customs {
+			background-image: url('../../img/customs_big.jpg');
+		}
+
+		.extras {
+			background-image: url('../../img/extras_big.jpg');
+		}
 
 		h3 {
 			position: absolute;
@@ -151,6 +166,8 @@
 	}
 
 	.contact {
+		background-image: url('../../img/contact_bg_big.jpg');
+
 		&__container {
 			display: flex;
 			justify-content: center;

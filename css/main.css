@@ -431,16 +431,16 @@ h3 {
   background-size: cover;
 }
 .products .wheels {
-  background-image: url("../../img/wheels_small.jpg");
+  background-image: url("../../img/wheels.jpg");
 }
 .products .decks {
-  background-image: url("../../img/decks_small.jpg");
+  background-image: url("../../img/decks.jpg");
 }
 .products .trucks {
-  background-image: url("../../img/trucks_big.jpg");
+  background-image: url("../../img/trucks.jpg");
 }
 .products .accessories {
-  background-image: url("../../img/accessories_big.jpeg");
+  background-image: url("../../img/accessories.jpeg");
 }
 
 .features {
@@ -1003,6 +1003,9 @@ h3 {
   }
 }
 @media (min-width: 992px) {
+  .header {
+    background-image: url("../../img/header_bg_big.jpg");
+  }
   .header-container {
     padding: 18rem 9rem;
   }
@@ -1059,6 +1062,16 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url("../../img/features_bg_big.jpg");
+  }
+  .features .services {
+    background-image: url("../../img/services_big.jpg");
+  }
+  .features .customs {
+    background-image: url("../../img/customs_big.jpg");
+  }
+  .features .extras {
+    background-image: url("../../img/extras_big.jpg");
   }
   .features h3 {
     position: absolute;
@@ -1114,6 +1127,9 @@ h3 {
     padding-top: 50px;
     display: block;
     width: 40%;
+  }
+  .contact {
+    background-image: url("../../img/contact_bg_big.jpg");
   }
   .contact__container {
     display: flex;
