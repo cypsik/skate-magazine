@@ -2,6 +2,81 @@
 
 .footer {
 	position: relative;
-	min-height: 25vh;
-    background-color: $theme-color;
+	padding-top: 3rem;
+	background-color: $theme-color;
+	color: $white;
+
+	&__copyright {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		bottom: 0;
+		padding: 2rem 0;
+		width: 100%;
+		font-family: $bold-italic-font;
+		text-transform: uppercase;
+		border-top: 2px solid $white;
+	}
+
+	&__box {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding-bottom: 3rem;
+
+		&-logo {
+			position: relative;
+			padding-bottom: 0.5rem;
+			text-transform: uppercase;
+			font-family: $bold-italic-font;
+			font-size: 2.8rem;
+		}
+
+		&-icons {
+			font-size: 3rem;
+			cursor: pointer;
+
+			.fa-x-twitter {
+				padding: 0 3rem;
+			}
+
+			.fa-brands:hover {
+				color: $turkish-color;
+			}
+		}
+	}
+
+	&__links {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	&__link {
+		margin: 0 auto;
+
+		a,
+		p {
+			padding-bottom: 0.5rem;
+		}
+
+		a {
+			display: block;
+			color: $white;
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+
+		p {
+			text-transform: uppercase;
+			font-family: $bold-italic-font;
+		}
+	}
+
+	&__features {
+		padding: 3rem 0;
+		grid-column: 1 / 3;
+	}
 }

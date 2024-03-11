@@ -124,4 +124,18 @@
 			}
 		}
 	}
+
+	.footer {
+		&__box {
+			&-logo {
+				transform: translateY(-1rem);
+			}
+		}
+
+		&__container {
+			display: grid;
+			grid-template-columns: 1fr 55%;
+			padding: 0 3rem;
+		}
+	}
 }

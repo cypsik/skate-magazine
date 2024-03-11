@@ -62,4 +62,30 @@
 			}
 		}
 	}
+
+	.footer {
+		&__box {
+			&-logo {
+				font-size: 3.6rem;
+			}
+
+			&-icons {
+				font-size: 4rem;
+
+				.fa-x-twitter {
+					padding: 0 4rem;
+				}
+			}
+		}
+
+		&__links {
+			padding-bottom: 3rem;
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+		&__features {
+			padding: 0;
+			grid-column: 3 / 4;
+		}
+	}
 }
