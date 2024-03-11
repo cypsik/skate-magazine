@@ -11,12 +11,13 @@ let closeBtn;
 let popup;
 let formName;
 let formEmail;
-let formMessage
+let formMessage;
 let footerYear;
 
 const main = () => {
 	prepareDOMElements();
 	prepareDOMEvents();
+	changeYear();
 };
 
 const prepareDOMElements = () => {
@@ -33,8 +34,8 @@ const prepareDOMElements = () => {
 	popup = document.querySelector('.contact__popup');
 	formName = document.querySelector('#name');
 	formEmail = document.querySelector('#email');
-	formMessage = document.querySelector('#message')
-	footerYear = document.querySelector('.footeryear');
+	formMessage = document.querySelector('#message');
+	footerYear = document.querySelector('.footer__year');
 };
 
 const prepareDOMEvents = () => {
@@ -101,6 +102,10 @@ const handleObserver = () => {
 	} else {
 		nav.classList.remove('nav-background');
 	}
+};
+
+const changeYear = () => {
+	footerYear.textContent = new Date().getFullYear();
 };
 
 document.addEventListener('DOMContentLoaded', main);

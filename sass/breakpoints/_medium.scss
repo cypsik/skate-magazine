@@ -127,15 +127,32 @@
 
 	.footer {
 		&__box {
+			margin: 0 auto 0 0;
 			&-logo {
-				transform: translateY(-1rem);
+				font-size: 2.8rem;
+				transform: translateY(-5px);
+			}
+
+			&-icons {
+				font-size: 3rem;
+
+				.fa-x-twitter {
+					padding: 0 3rem;
+				}
 			}
 		}
 
 		&__container {
-			display: grid;
-			grid-template-columns: 1fr 55%;
-			padding: 0 3rem;
+			display: flex;
+			padding: 0 6rem;
+		}
+
+		&__links {
+			flex-grow: 1;
+		}
+
+		&__link {
+			margin: 0 0 0 auto;
 		}
 	}
 }

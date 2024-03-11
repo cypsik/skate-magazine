@@ -168,4 +168,16 @@
 			width: 900px;
 		}
 	}
+
+	.footer {
+		&__box {
+			&-logo {
+				font-size: 3.6rem;
+			}
+
+			&-icons {
+				font-size: 4rem;
+			}
+		}
+	}
 }
