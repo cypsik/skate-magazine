@@ -1,4 +1,4 @@
-<h1 style='text-align: center;'>SKATE MAGAZINE</h1>
+<h1 align='center'>SKATE MAGAZINE</h1>
 
 ## Responsive website for imaginary skate shop
 
