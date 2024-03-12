@@ -6,7 +6,7 @@
 	align-items: center;
 	position: relative;
 	min-height: 75vh;
-	background-image: url('../../img/header_bg_small.jpg');
+	background-image: url('./../img/header_bg_small.jpg');
 	@include hero-img;
 
 	&::after {
@@ -83,7 +83,7 @@
 
 		&--front {
 			padding: 1.8rem 1.8rem 0;
-			background-image: url('../../img/card_pattern.jpg');
+			background-image: url('./../img/card_pattern.jpg');
 			background-size: cover;
 			background-position: center;
 			transform: rotateY(0deg);
@@ -111,7 +111,7 @@
 		}
 
 		&--back {
-			background-image: url('../../img/card_back.png');
+			background-image: url('./../img/card_back.png');
 			background-size: cover;
 			background-position: center;
 			border-radius: 20px;

@@ -3,7 +3,7 @@
 
 .features {
 	position: relative;
-	background-image: url('../../img/features_bg_small.jpg');
+	background-image: url('./../img/features_bg_small.jpg');
 	@include hero-img;
 
 	&::after {
@@ -71,21 +71,21 @@
 	}
 
 	.services {
-		background-image: url('../../img/services_small.jpg');
+		background-image: url('./../img/services_small.jpg');
 		&::before {
 			background-color: $red-color-70;
 		}
 	}
 
 	.customs {
-		background-image: url('../../img/customs_small.jpg');
+		background-image: url('./../img/customs_small.jpg');
 		&::before {
 			background-color: $turkish-color-70;
 		}
 	}
 
 	.extras {
-		background-image: url('../../img/extras_small.jpg');
+		background-image: url('./../img/extras_small.jpg');
 		background-position: 25%;
 		&::before {
 			background-color: $yellow-color-70;

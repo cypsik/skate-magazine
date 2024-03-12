@@ -3,7 +3,7 @@
 
 .contact {
 	position: relative;
-	background-image: url('../../img/contact_bg_small.jpg');
+	background-image: url('./../img/contact_bg_small.jpg');
 	@include hero-img;
 
 	&::after {
