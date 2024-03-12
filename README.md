@@ -1,3 +1,3 @@
-# SKATE MAGAZINE
+# **SKATE MAGAZINE**
 
 ## Responsive website for imaginary skate shop
