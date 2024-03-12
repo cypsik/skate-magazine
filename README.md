@@ -2,7 +2,7 @@
 
 ## Responsive website for imaginary skate shop
 
-The main objective of this project was to create a responsive website using vanilla JavaScript and CSS, with a previously prepared template.
+The main objective of this project was to create a responsive website using vanilla JavaScript and SASS, with a previously prepared template.
 
 Secondly, the goal was to develop a grasp of semantic HTML and CSS through the Sass 7-1 pattern.
 
